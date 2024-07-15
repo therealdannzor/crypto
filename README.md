@@ -57,9 +57,9 @@ A miner that is merge mining must continuously assemble blocks for both chains (
 
 In the example of merge mining Bitcoin with Namecoin, if solving a BTC block, only an extra hash is required in the coinbase transaction's `ScriptSig` field. For the Namecoin block, it would need a reference to the Bitcoin block through its `AuxPow` data structure which contains comparatively more overhead compared to what is store in the Bitcoin ledger.
 
-Example of an AuxPoW block on the Namecoin network where the shaded fields are there by default (when not merge mining):
+Example of an AuxPoW block on the Namecoin network where the shaded fields are there by default (when not merge mining) [4]:
 
-[!namecoin_block_with_aux_pow](./assets/btc_nmc_merge_mining.png)
+<img src="assets/btc_nmc_merge_mining.png">
 
 
 ## References
