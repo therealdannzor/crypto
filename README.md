@@ -17,11 +17,11 @@ Curve bilinear pairings operates on two cryptographic groups to obtain a third g
 Curve pairings help solve more complex problems on the curve. If we have `P = p * G` and `Q = q * G` (where `p` and `q` are scalars, and `G` is a generator point on the curve), we can compute `R = p * q * G`, a point in `G_T`. If `R` and `G` is known for another party, it is computationally very unlikely to be able to retrieve `k = p * q`. See elliptic curve discrete logarithm problem (ECDLP).
 
 
-### Commitment Scheme
+## Commitment Scheme
 
 A cryptographic protocol that allows one party to commit to a value without revealing it and the ability to do so later. Two fundamental properties: hiding and binding. Hiding ensures that the committed value remains confidential and cannot be inferred from the commitment itself. Binding ensures that once a value is committed, it is immutable (integrity).
 
-#### Non-Interactive Schemes
+### Non-Interactive Schemes
 
 The Pedersen commitment scheme is non-interactive. It is one-sided and does not require back-and-forth messaging between the commiter (sender) and verifier (receiver) such as the Diffie-Hellman key exchange algorithm. A way to make an interactive scheme (or proof) non-interactive is through Fiat-Shamir heuristic and creating a digital signature of it.
 
@@ -37,7 +37,7 @@ A Pedersen commitment maps `(v,r)` in the first algorithm above to `vH + rG` and
 
 A range proof on a homomorphic encryption `C` is a proof that the committed value of `C` is within a given range `[a,b]`. Default range is `[0,2^n]` and cannot produce an overflow. It must be a zero-knowledge proof of knowledge of the opening information of the commitments.
 
-#### Example: Why Use A Blinding Factor
+### Example: Why Use A Blinding Factor
 
 From [2]:
 
