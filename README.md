@@ -60,7 +60,7 @@ Let us set a point on the curve `X = x * G`, where `x` is a value, and the same 
 
 Problem: same as above, we can use bruteforce to find the secret value so it won't help us.
 
-Another attempt: let `X = `(5+r) * G`, reveal `5` and `r`. Not binding because you can find `r' = (5 + r) - 6  <-> r' + 6 = 5 + r`, so `X` is the same and you can reveal `6` and `r'`.
+Another attempt: let `X = (5+r) * G`, reveal `5` and `r`. Not binding because you can find `r' = (5 + r) - 6  <-> r' + 6 = 5 + r`, so `X` is the same and you can reveal `6` and `r'`.
 
 How about `hash(5, r) * G`? Then no longer homomorphic.
 
